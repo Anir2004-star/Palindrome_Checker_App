@@ -1,20 +1,16 @@
-// PalindromeChecker.java
-
 public class PalindromeChecker {
-    static final String APP_NAME = "Palindrome Checker App";
-    static final String APP_VERSION = "Version 1.0";
 
     public static void main(String[] args) {
+        String original = "level";
+        String reversed = "";
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);
+        }
 
-        System.out.println(" Welcome to " + APP_NAME);
-        System.out.println(" " + APP_VERSION);
-        System.out.println("This application checks whether a given string is a palindrome.");
-        System.out.println();
-
-        System.out.println("Application started successfully.");
-        System.out.println("Ready for palindrome processing...");
-
-
-        System.out.println("Exiting Application...");
+        if (original.equals(reversed)) {
+            System.out.println(original + " is a Palindrome.");
+        } else {
+            System.out.println(original + " is not a Palindrome.");
+        }
     }
 }
